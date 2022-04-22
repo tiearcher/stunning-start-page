@@ -1,0 +1,161 @@
+html {
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: Georgia, serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #bebebe;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 10rem auto;
+  grid-template-rows: auto 1.5rem;
+  grid-template-areas:
+    "left center right"
+    ". center .";
+}
+
+h1 {
+  margin: 0;
+  grid-area: center;
+  z-index: 1;
+}
+
+nav {
+  grid-column: 1/-1;
+  background-color: #bd027d;
+  grid-row: 1;
+}
+
+nav ul {
+  height: 100%;
+  margin: 0;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+li a {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #eccee2;
+  border: 2px solid #960062;
+  border-radius: 6px;
+  padding: .5em .8em;
+  margin: auto;
+  justify-content: space-between;
+}
+
+nav a:hover {
+  background-color: #960062;
+  color: #fff;
+}
+
+main {
+  margin: .5em;
+  padding: .5rem .5rem 1.5rem;
+  border-bottom: 2px solid #afafaf;
+}
+
+main p {
+  margin: 0 0 .5em;
+  padding: 0 0 1.5rem;
+  font-size: 1.125rem;
+  color: #323232;
+  border-bottom: 2px solid #afafaf;
+}
+
+h2, h3 {
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #323232;
+}
+
+h3 {
+  text-align: center;
+  background-color: rgba(0, 0, 0, .1);
+  padding: 1rem;
+  margin: -4rem 0 0;
+}
+
+section ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+section ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  list-style: none;
+  border: 2px solid #afafaf;
+  border-radius: 6px;
+  background-color: #ccc;
+  margin: 0;
+  padding: .5em 0;
+}
+
+div {
+  order: -2;
+  color: #323232;
+  font-style: italic;
+  font-weight: lighter;
+  background-color: #bebebe;
+  display: inline-flex;
+  border-radius: 1em 0 0 1em;
+  padding: 0 .5em 0 0;
+  margin: 0 0 0 auto;
+  align-items: center;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  order: -1;
+  display: block;
+  width: 100%;
+}
+
+li img {
+  margin: -2rem 0 0;
+  padding: 0;
+}
+
+li div img {
+  max-width: 1em;
+  margin: 0 .5rem;
+}
+
+footer p, footer a {
+  display: inline;
+  font-size: .875rem;
+}
+
+footer a {
+  float: right;
+  color: #000;
+}
+
+footer p {
+  color: #323232;
+}
+
+footer {
+  margin: 1rem;
+  padding: 0;
+}
